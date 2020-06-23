@@ -1,6 +1,7 @@
 <template>
   <div class="">
     <Header></Header>
+    <h1>About</h1>
   </div>
 </template>
 

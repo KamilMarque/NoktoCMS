@@ -37,10 +37,10 @@ export default {
             if (this.email && this.password) {
                 this.user = await this.$http.post('http://localhost:4000/login', {headers: {'Content-Type': 'application/json'}, user: {mail: this.email, password: this.password}
                 }).then( response => {
-                    localStorage.setItem('user',JSON.stringify(response.data.user))
-                    localStorage.setItem('jwt',response.data.token)
+                    sessionStorage.setItem('user',JSON.stringify(response.data.user))
+                    sessionStorage.setItem('jwt',response.data.token)
                      this.$emit('loggedIn')
-                    if (localStorage.getItem('jwt') != null){
+                    if (sessionStorage.getItem('jwt') != null){
                         if(this.$route.params.nextUrl != null){
                             console.log("okok");
                             //this.$router.push(this.$route.params.nextUrl)
@@ -63,19 +63,13 @@ export default {
 </script>
 
 <style lang="scss">
+
 .mt32 {margin-top: 32px}
 .mb32 {margin-bottom: 32px}
 .mt64 {margin-top: 64px}
 .mb64 {margin-bottom: 64px}
 .mt16 {margin-top: 16px}
 .mb16 {margin-bottom: 16px}
-
-body{
-    margin: 0px;
-    height:100%;
-    background-color: #D9D9D9;
-}
-
 .login {
     display: grid;
     grid-template-columns: repeat(12, 82px);

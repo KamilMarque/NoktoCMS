@@ -27,13 +27,31 @@ Vue.use(VueRouter)
     },
   },
   {
+    path: '/overview',
+    name: 'Overview',
+    component: () => import(/* webpackChunkName: "Overview" */ '../views/Overview.vue'),
+    meta: {
+      isConnected: true
+    },
+  },
+  {
     path: '/pannel',
     name: 'Pannel',
-    component: () => import(/* webpackChunkName: "Pannel"*/ '../views/Pannel.vue'),
+    component: () => import(/* webpackChunkName: "Pannel" */ '../views/Pannel.vue'),
+    children: [{
+      path: 'Overview',
+      component: () => import(/* webpackChunkName: "Overview" */ '../views/Overview.vue'),
+      name: 'Pannel.Overview'
+    },
+    {
+      path: '/helloWorld',
+      component: () => import(/* webpackChunkName: "HelloWorld" */ '../components/HelloWorld.vue'),
+      name: 'Pannel.HelloWorld'
+    }],
     meta: {
       requiresAuth: true
     },
-  }
+  },
 ]
 
 const router = new VueRouter({
@@ -45,13 +63,13 @@ const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
   if(to.matched.some(record => record.meta.requiresAuth)) {
-      if (localStorage.getItem('jwt') == null) {
+      if (sessionStorage.getItem('jwt') == null) {
           next({
               path: '/login',
               params: { nextUrl: to.fullPath }
           })
       } else {
-          let user = JSON.parse(localStorage.getItem('user'))
+          let user = JSON.parse(sessionStorage.getItem('user'))
           if(to.matched.some(record => record.meta.is_admin)) {
               if(user.is_admin == 1){
                   next()
@@ -64,8 +82,7 @@ router.beforeEach((to, from, next) => {
           }
       }
   } else if (to.matched.some(record => record.meta.isConnected)) {
-    console.log("dd");
-      if (localStorage.getItem('jwt') != null) {
+      if (sessionStorage.getItem('jwt') != null) {
         console.log("ccccc");
         next({ name: 'Pannel'})
       } else {
