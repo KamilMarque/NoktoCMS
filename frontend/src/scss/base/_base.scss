@@ -1,0 +1,122 @@
+/*--------- BASE OF THE WEBSITE ----------*/
+
+/*--------- reset ----------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	text-decoration: none;
+	color: black;
+	font-family: 'Poppins', sans-serif;
+
+	::-webkit-scrollbar {
+		width: 8px;
+	}
+
+	::-webkit-scrollbar-track {
+		box-shadow: inset 0 0 5px grey;
+		border-radius: 10px;
+		background: #f1f1f1;
+	}
+
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		background: #a2a2a2;
+		border-radius: 10px;
+	}
+
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+		background: #555;
+	}
+}
+
+/*--------- margins ----------*/
+
+.mb16 {margin-bottom: 16px}
+.mt16 {margin-top: 16px}
+.mt32 {margin-top: 32px;}
+.mb32 {margin-bottom: 32px}
+.ml32 {margin-left: 32px}
+.mb48 {margin-bottom: 48px}
+.mt104 {margin-top: 104px}
+.mb104 {margin-bottom: 104px}
+
+/*--------- paddings ----------*/
+
+.pl16 {padding-left: 16px}
+.pt16 {padding-top: 16px}
+.pb16 {padding-bottom: 16px}
+.pt24 {padding-top: 24px}
+.pb24 {padding-bottom: 24px}
+.p32 {padding: 32px}
+.pl32 {padding-left: 32px}
+.pt32 {padding-top: 32px}
+.pb32 {padding-bottom: 32px}
+.p48 {padding: 48px}
+.pt104 {padding-top: 104px}
+.pb104 {padding-bottom: 104px}
+
+a {
+    cursor: pointer;
+}
+
+/*--------- size ----------*/
+
+.height--100 { height: 100vh; }
+.width--100 { width: 100%; }
+
+
+/*--------- Flexbox ----------*/
+
+.flexbox { display: flex; }
+
+.flex--direction--column { flex-direction: column; }
+
+.flex-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.align--items--center { align-items: center; }
+
+.justify-content { justify-content: center; }
+
+.justify--content--space {justify-content: space-between;}
+
+.text-center { text-align: center}
+
+/*--------- Grid ----------*/
+
+.grid { display: grid; column-gap: 32px;}
+
+.classic-grid {	@extend .grid; grid-template-columns: repeat(12, 1fr); width: 1366px;}
+
+/*--------- Display ----------*/
+
+.inline--block {display: inline-block;}
+
+/*--------- align ----------*/
+
+.center {margin-left: auto; margin-right: auto;}
+
+/*--------- scroll ----------*/
+
+.stop-scrolling {overflow: hidden}
+

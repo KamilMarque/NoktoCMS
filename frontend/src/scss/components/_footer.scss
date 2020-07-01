@@ -1,0 +1,118 @@
+/*--------- FOOTER OF THE WEBSITE ----------*/
+
+.footer {
+  background-color: $third--color;
+  color: black;
+
+  &__infos {
+    @extend .classic-grid;
+    @extend .center;
+
+    &--text {
+      margin-top: 48px;
+      grid-column: 1 / 6;
+    }
+
+    &--navigation {
+      grid-column: 6 / 13;
+      @extend .flexbox;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-top: 84px;
+
+      h4 {
+        @extend .font--weight--bold;
+        font-size: 14px;
+        margin-bottom: 24px;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+
+      }
+
+      .suit {
+        margin-top: 44px;
+      }
+    }
+
+    &--social {
+      grid-column: 1 / 13;
+      margin: 0 auto 32px auto;
+
+      img {
+        margin: 10px;
+      }
+    }
+
+    &--sign {
+      grid-column: 1 / 13;
+      width: 100%;
+      padding-top: 10px;
+      text-align: center;
+      border-top: solid 1px black;
+      margin-bottom: 24px;
+
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1365px) {
+
+  .footer {
+    text-align: center;
+    &__infos {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      grid-template-columns: 1fr;
+
+      &--text {
+        margin-right: 48px;
+        margin-left: 48px;
+        margin-top: 48px;
+        grid-column: 1 / 13;
+      }
+
+    &--navigation {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 24px;
+        font-size: 1em;
+
+        h4 {
+          margin-bottom: 10px;
+          margin-top: 24px;
+          font-size: 1.7em;
+        }
+
+        div {
+          display: flex;
+          flex-direction: column;
+
+          a {
+            line-height: 48px;
+            font-size: 1em;
+          }
+        }
+        .suit {
+          margin-top: 0;
+        }
+      }
+
+      &--social {
+        margin-top: 24px;
+      }
+
+      &--sign {
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+  }
+}

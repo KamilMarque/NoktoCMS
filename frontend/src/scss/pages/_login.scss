@@ -1,0 +1,100 @@
+/*--------- CONTENT OF THE LOGIN PAGE ----------*/
+.login_container {
+  @extend .flexbox;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login {
+  @extend .flexbox;
+  @extend .center;
+  padding: 64px;
+  flex-direction: column;
+  justify-content: center;
+  width: 450px;
+  background-color: white;
+  box-shadow: 0px 3px 30px #00000029;
+
+  &--back {
+    @extend .icon--back;
+    background-size: 50px;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: 32px;
+    top: 32px;
+
+  }
+
+  &__logo {
+    @extend  .mb32;
+    height: 50px;
+  }
+
+  &__intro {
+    @extend .mt32;
+    text-align: center;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+
+    &--forgot {
+      @extend .mt16;
+      @extend .mb32;
+    }
+
+    label {
+      @extend .mt32;
+      @extend .mb16;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    &--icon {
+      @extend .icon--eye;
+      position: relative;
+      top: 37px;
+      right: 24px;
+    }
+
+    &--input {
+      padding-left: 16px;
+      height: 52px;
+      width: auto;
+      background: #E9E9E9 0% 0% no-repeat padding-box;
+      border: none;
+    }
+
+    &--submit {
+      height: 64px;
+      background-color: $third--color !important;
+      border: none;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .login_container {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .login {
+    width: 100%;
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+
+    &--back {
+      background-size: 32px;
+      top: 4px;
+      left: 4px;
+    }
+  }
+}

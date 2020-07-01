@@ -39,7 +39,7 @@ Vue.use(VueRouter)
     name: 'Pannel',
     component: () => import(/* webpackChunkName: "Pannel" */ '../views/Pannel.vue'),
     children: [{
-      path: 'Overview',
+      path: '/overview',
       component: () => import(/* webpackChunkName: "Overview" */ '../views/Overview.vue'),
       name: 'Pannel.Overview'
     },
@@ -47,6 +47,11 @@ Vue.use(VueRouter)
       path: '/helloWorld',
       component: () => import(/* webpackChunkName: "HelloWorld" */ '../components/HelloWorld.vue'),
       name: 'Pannel.HelloWorld'
+    },
+    {
+      path: '/articles',
+      component: () => import(/* webpackChunkName: "Articles" */ '../views/Articles.vue'),
+      name: 'Pannel.Articles'
     }],
     meta: {
       requiresAuth: true
@@ -84,7 +89,7 @@ router.beforeEach((to, from, next) => {
   } else if (to.matched.some(record => record.meta.isConnected)) {
       if (sessionStorage.getItem('jwt') != null) {
         console.log("ccccc");
-        next({ name: 'Pannel'})
+        next({ name: 'Pannel.Overview'})
       } else {
         next()
       }

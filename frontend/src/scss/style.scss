@@ -1,0 +1,268 @@
+/*--------- GLOBAL ----------*/
+
+
+@import "./base/base";
+@import "./base/layout-cms";
+@import "./base/typo";
+@import "./base/colors";
+@import "./base/icons";
+
+@import "./components/nav-cms";
+@import "./components/buttons";
+@import "./components/shortcuts";
+@import "./components/header";
+@import "./components/footer";
+
+@import "./pages/home";
+@import "./pages/login";
+
+// .header {
+//     width: 100%;
+//     height: 25px;
+//     background-color: yellow;
+// }
+
+
+// .mt32 {margin-top: 32px}
+// .mb32 {margin-bottom: 32px}
+// .mt64 {margin-top: 64px}
+// .mb64 {margin-bottom: 64px}
+// .mt16 {margin-top: 16px}
+// .mb16 {margin-bottom: 16px}
+
+
+// button {
+//     height: 42px;
+//     width: 200px;
+//     margin: auto;
+//     margin-top: 16px;
+//     font: Bold 16px Poppins;
+//     background: #55D0C5 0% 0% no-repeat padding-box;
+//     border: none;
+//     border-radius: 26px;
+//     opacity: 1;
+//     letter-spacing: 0px;
+//     color: #FFFFFF;
+
+//     &:hover {
+//       background: #FFFFFF;
+//       color: #55D0C5;
+//       border: 1px solid #55D0C5;
+//     }
+// }
+
+// body{
+//     margin: 0px;
+//     height:100vh;
+//     background: transparent linear-gradient(241deg, #F7F8FA 0%, #F5F9FA 100%) 0% 0% no-repeat padding-box !important;
+// }
+
+// #app {
+//   font-family: Poppins, Helvetica, Arial, sans-serif;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+//   text-align: center;
+//   color: #2c3e50;
+// }
+
+// #nav {
+//   padding: 30px;
+// }
+
+// #nav a {
+//   font-weight: bold;
+//   color: #2c3e50;
+// }
+
+// #nav a.router-link-exact-active {
+//   color: #42b983;
+// }
+
+// .logout{
+//     border: 1px solid #55D0C5;
+//     border-radius: 26px;
+//     opacity: 1;
+//     letter-spacing: 0px;
+//     color: #55D0C5;
+//     background-color: transparent;
+
+//     &:hover {
+//       background-color: #55D0C5;
+//       color: white;
+//     }
+// }
+
+// .router-link-active {
+//     font-weight: bold;
+//   }
+  
+//   .img {
+//       margin-right: 16px;
+//       height: 26px;
+//       vertical-align: middle;
+//   }
+  
+//   .logo {
+//       align-self: center;
+//       margin: auto;
+//       height: 52px;
+//       width: auto;
+//   }
+  
+//   .list{
+//     padding-left: 32px;
+//     padding-top: 32px;
+//     padding-bottom: 32px;
+//     text-align: left;
+//     font: 16px Poppins;
+//     text-decoration: none;
+//     color: black;
+
+//     &:hover {
+//         box-sizing: border-box;
+//         background-color: #D9D9D9;
+//     }
+
+// }
+// .nav {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-evenly;
+// }
+
+// .container {
+//     display: grid;
+//     grid-template-columns: 282px auto;
+//     column-gap: 32px;
+//   }
+  
+//   input:focus,
+//   select:focus,
+//   textarea:focus,
+//   button:focus {
+//       outline: none;
+//   }
+  
+//   textarea:focus, input:focus{
+//       outline: none;
+//   }
+  
+//   .content-components {
+//     display: flex;
+//     flex-wrap: wrap;
+//     margin-top: 16px;
+//     justify-content: space-evenly;
+//   }
+  
+//   .menu {
+//       display: grid;
+//       grid-template-rows: 20vh 60vh 20vh;
+//       background-color: #FFFFFF;
+//   }
+
+//   .login {
+//       display: grid;
+//       grid-template-columns: repeat(12, 82px);
+//       grid-template-rows: 10vh;
+//       column-gap: 32px;
+//       justify-content: center;
+  
+//   }
+  
+//   .login-content {
+//       grid-column: 4 / 10;
+//       grid-row: 2;
+//       background-color:#FFFFFF;
+//       padding-left: 82px + 32px;
+//       padding-right: 82px + 32px;
+//       box-shadow: 0px 3px 30px #00000029;
+//   }
+  
+//   .logoDPS {
+//       @extend .mt64;
+//       width: 10em;
+//   }
+  
+//   #email, #password {
+//       @extend .mt32;
+//       @extend .mb32;
+//       font-size: bold;
+  
+//       label {
+//           @extend .mb16;
+//           float: left;
+//           font: Bold 20px/30px Poppins;
+  
+//       }
+  
+//       input {
+//           width: 100%;
+//           height: 52px;
+//           border: none;
+//           background-color: #E9E9E9;
+//           padding-left: 16px;
+//           box-sizing: border-box; 
+//       }
+//   }
+  
+//   #password-forgot {
+//       @extend .mt16;
+//       float: left;
+//       font-weight: regular;
+//       font-size: 14px;
+//       color: #9D9D9D;
+//       text-decoration: underline;
+//   }
+  
+//   .btn {
+//       width: 100%;
+//       height: 64px;
+//       border: none;
+//       background-color: #55D0C5;
+//       @extend .mt32, .mb32;
+//       color:  #FFFFFF;
+//       font-weight: Bold;
+//       font-size: 20px;
+//   }
+  
+//   #line {
+//       @extend .mb32;
+//       height: 10px;
+//       width: 100%;
+//       border-bottom: 1px solid #9D9D9D;
+//   }
+  
+//   #new-account {
+//       padding-bottom: 64px;
+//   }
+  
+//   @media screen and (max-width: 800px) {
+//       .login {
+//       grid-template-columns: 1fr 8fr 1fr;
+//       grid-template-rows: 10vh 80vh 10vh; 
+//       column-gap: 23px;
+//       }
+  
+//       .login-content {
+//           grid-column: 2;
+//           grid-row: 2;
+//           padding-left: 70px + 23px !important;
+//           padding-right: 70px + 23px;
+//       }
+//   }
+  
+//   @media screen and (max-width: 600px) {
+//       .login {
+//       grid-template-columns: 1fr;
+//       grid-template-rows: 100vh;
+//       }
+  
+//       .login-content {
+//           grid-column: auto;
+//           margin: auto;
+//           grid-row: 1;
+//           padding-left: 47px + 13px !important;
+//           padding-right: 47px + 13px;
+//       }
+//   }
+  

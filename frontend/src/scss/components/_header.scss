@@ -1,0 +1,242 @@
+/*--------- HEADER OF THE WEBSITE ----------*/
+$heightHeader: 107px;
+
+.header {
+  @extend .flexbox;
+  justify-content: space-between;
+  align-items: center;
+  height: $heightHeader;
+  padding: 0 32px;
+
+  &__logo {
+    height: 52px;
+    width: 145px;
+    background: url(./assets/logoDPS.svg) no-repeat top center;
+  }
+
+  &__nav {
+    @extend .flexbox;
+    justify-content: space-between;
+    width: 38%;
+
+    &--router {
+      @extend .txt--color--white;
+    }
+
+    .router-link-active {
+      font-weight: bold;
+    }
+  }
+
+  &__link {
+    width: 97px;
+    @extend .flexbox;
+    justify-content: space-between;
+
+    &--facebook {
+      @extend .icon--facebook-white;
+      display: inline-block;
+      height: 21px;
+      width: 20px;
+    }
+
+    &--instagram {
+      @extend .icon--instagram-white;
+      display: inline-block;
+      height: 21px;
+      width: 20px;
+    }
+
+    &--user {
+      @extend .icon--adherant-white;
+      background-position: center;
+      background-size: 19px;
+      display: inline-block;
+      height: 21px;
+      width: 20px;
+    }
+
+    &--menu {
+      display: none;
+    }
+  }
+
+  &__responsive {
+    position: fixed;
+    height: 100vh;
+    width: 95%;
+
+    z-index: 2;
+    color: black;
+    margin-right: 0;
+    margin-left: auto;
+
+    h1 {
+      position: relative;
+      z-index: 2;
+      top: 30px;
+    }
+  }
+}
+
+#wrap {
+  display: none;
+}
+
+@media screen and (max-width: 1365px) {
+  .header {
+
+    &__nav {
+      display: none;
+    }
+
+    &__link {
+      display: none;
+    }
+
+    &__link {
+      width: 130px;
+
+      &--menu {
+        background: url(./assets/menu.svg) no-repeat center;
+        background-size: 24px;
+        display: inline-block;
+        height: 24px;
+        width: 20px;
+      }
+    }
+  }
+
+  #wrap {
+    background-color: black;
+    display: block;
+    font-family: arial;
+    animation: bugfix infinite 1s;
+    -webkit-animation: bugfix infinite 1s;
+  }
+
+  @keyframes bugfix {
+    from {
+      padding: 0;
+    }
+    to {
+      padding: 0;
+    }
+  }
+  @-webkit-keyframes bugfix {
+    from {
+      padding: 0;
+    }
+    to {
+      padding: 0;
+    }
+  }
+
+  #overlay-button:hover {
+    outline:0;
+  }
+
+  #overlay-button {
+    position: absolute;
+    right: 1em;
+    top: 1.5em;
+    padding: 26px 11px;
+    z-index: 5;
+    cursor: pointer;
+    user-select: none;
+
+    span {
+      height: 4px;
+      width: 35px;
+      right: 20px;
+      border-radius: 2px;
+      background-color: white;
+      position: relative;
+      display: block;
+      transition: all .2s ease-in-out;
+
+      &:before {
+        top: -10px;
+        visibility: visible;
+      }
+
+      &:after {
+        top: 10px;
+      }
+
+      &:before, &:after {
+        height: 4px;
+        width: 35px;
+        border-radius: 2px;
+        background-color: white;
+        position: absolute;
+        content: "";
+        transition: all .2s ease-in-out;
+      }
+    }
+  }
+
+  input[type=checkbox] {
+    display: none;
+  }
+
+  input[type=checkbox]:checked ~ #overlay {
+    visibility: visible;
+  }
+
+  input[type=checkbox]:checked ~ #overlay-button {
+    &:hover span, span {
+      background: transparent;
+    }
+
+    span {
+      &:before {
+        transform: rotate(45deg) translate(7px, 7px);
+        opacity: 1;
+      }
+
+      &:after {
+        transform: rotate(-45deg) translate(7px, -7px);
+      }
+    }
+  }
+
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: $second--color;
+    z-index: 2;
+    visibility: hidden;
+    position: fixed;
+
+    &.active {
+      visibility: visible;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      height: 100vh;
+      padding-left: 0;
+      list-style-type: none;
+
+      a {
+        vertical-align: center;
+        line-height: 48px;
+        color: white;
+        text-decoration: none;
+        font-size: 1.5em;
+
+        &:hover {
+          color: #333332;
+        }
+      }
+    }
+  }
+}

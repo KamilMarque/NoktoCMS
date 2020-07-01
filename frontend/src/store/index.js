@@ -10,6 +10,9 @@ const state = {
 const mutations = {
   ADD_CONNECTION: (state) => {
     state.Connected = true
+  },
+  REMOVE_CONNECTION: (state) => {
+    state.Connected = false
   }
 }
 
@@ -20,6 +23,9 @@ const getters = {
 const actions = {
   connect ({ commit }) {
     commit('ADD_CONNECTION')
+  },
+  disconnect ({ commit }) {
+    commit('REMOVE_CONNECTION')
   }
 }
 

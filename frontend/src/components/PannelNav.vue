@@ -59,14 +59,14 @@ a {
     width: auto;
 }
 
-.logout {
-    background: #55D0C5 0% 0% no-repeat padding-box;
-    border: none;
-    border-radius: 26px;
-    opacity: 1;
-    letter-spacing: 0px;
-    color: #FFFFFF;
-}
+// .logout {
+//     background: #55D0C5 0% 0% no-repeat padding-box;
+//     border: none;
+//     border-radius: 26px;
+//     opacity: 1;
+//     letter-spacing: 0px;
+//     color: #FFFFFF;
+// }
 
 .go-back{
     border: 1px solid #55D0C5;

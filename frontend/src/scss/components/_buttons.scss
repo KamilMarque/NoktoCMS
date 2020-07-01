@@ -1,0 +1,30 @@
+/*--------- BUTTONS ----------*/
+
+
+.button {
+    width: 223px;
+    height: 52px;
+    @extend .flexbox;
+    @extend .flex-center;
+    border-radius: 26px;
+
+    &--first {
+        @extend .primary--color;
+        @extend .txt--color--white;
+        @extend .font--weight--bold;
+    }
+
+    &--second {
+        border: 1px solid #55D0C5;
+        @extend .txt--color--primary; 
+        @extend .font--weight--bold;
+    }
+
+    &--website {
+        @extend .font--weight--bold;
+        @extend .txt--color--black;
+        background-color: $third--color;
+        font-size: 16px;
+        border-radius: 0;
+    }
+}

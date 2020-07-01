@@ -1,0 +1,65 @@
+/*--------- NAV ----------*/
+
+.navCMS {
+    @extend .height--100;
+    width: 400px;
+    border-radius: 0 40px 40px 0;
+    background-color: white;
+    @extend .flexbox;
+    @extend .flex--direction--column;
+    @extend .justify--content--space;
+
+    &__logo{
+        height: 52px; 
+        width: 100%;
+        background: url(./assets/logo.svg) no-repeat top center;
+        margin-top: 32px;
+    }
+
+    &__menu {
+
+        height: 60%;
+        @extend .flexbox; 
+        @extend .flex--direction--column;
+        @extend .justify-content;
+    }
+
+    &__link {
+        width: 70%; 
+        height: 60px;
+        @extend .flexbox; 
+        @extend .align--items--center;
+        padding-left: 56px;
+        margin: 16px 0 16px 60px;
+
+        &:active {
+            font-weight: bold;
+        }
+
+        &--home {
+            @extend .icon--home;
+        }
+        &--adherant {
+            @extend .icon--adherant;
+        }
+        &--dons {
+            @extend .icon--dons;
+        }
+        &--documents {
+            @extend .icon--documents;
+        }
+        &--articles {
+            @extend .icon--articles;
+        }
+    }
+
+
+
+    &__buttons {
+        height: 166px; 
+        width: 100%;
+        @extend .flexbox; 
+        @extend .flex--direction--column;
+        @extend .align--items--center;
+    }
+}
